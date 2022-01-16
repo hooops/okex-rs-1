@@ -13,7 +13,7 @@ mod tests {
 
         let mut map = HashMap::new();
         map.insert("ccy", "BTC");
-        let b = account::balance(&mut a, None).await.unwrap();
+        let b = account::balance(&mut a, Some(map)).await.unwrap();
         println!("{}", b);
     }
 }
